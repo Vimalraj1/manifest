@@ -4,11 +4,25 @@
   <remote  name="benzo"
            fetch="https://github.com/BenzoRom/"
            revision="eightone"/>
+
   <remote  name="bb"
            fetch="https://bitbucket.org/xanaxdroid/" />
+
+  <remote  name="github"
+           fetch="https://github.com/" />
+
   <remote  name="aosp"
            fetch="https://android.googlesource.com"
            review="android-review.googlesource.com" />
+
+  <remote  name="pure"
+           fetch="https://github.com/Aosp-pure"
+           revision="refs/heads/o-mr1" />
+
+  <remote  name="LineageOs"
+           fetch="https://github.com/LineageOS"
+           revision="refs/heads/lineage-15.0" />
+
   <default revision="refs/tags/android-8.1.0_r1"
            remote="aosp"
            sync-c="true"
@@ -579,5 +593,9 @@
   <project path="tools/tradefederation/contrib" name="platform/tools/tradefederation/contrib" groups="pdk,tradefed" />
 
   <repo-hooks in-project="platform/tools/repohooks" enabled-list="pre-upload" />
+
+  <include name="cleanup.xml" />
+  <include name="pure.xml" />
+  <include name="LineageOs.xml" />
 
 </manifest>
